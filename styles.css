@@ -55,13 +55,12 @@ body {
 .link-item a::before {
   content: '';
   position: absolute;
-  left: 50%;
+  left: -50%;
+  right: -50%;
   bottom: 0;
-  width: 0;
   height: 2px;
   background-color: #3498db;
-  transition: width 0.3s ease, left 0.3s ease;
-  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
 
 .link-item a:hover {
@@ -70,8 +69,7 @@ body {
 }
 
 .link-item a:hover::before {
-  width: 100%;
-  left: 0;
+  width: 200%;
 }
 
 /* Hover Animation */
@@ -99,4 +97,20 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
   display: block;
+}
+
+/* Print and Share Buttons */
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
 }
